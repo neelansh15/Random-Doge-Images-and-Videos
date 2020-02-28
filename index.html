@@ -27,8 +27,8 @@
                 $.ajax({
                     url: 'https://random.dog/woof.json',
                     success: function(result){
-                        url = result['url'].toLowerCase()
-                        if(url.endsWith('.jpg') || url.endsWith('.png') || url.endsWith('.gif') || url.endsWith('.jpeg')){
+                        url = result['url']
+                        if(url.endsWith('.jpg') || url.endsWith('.png') || url.endsWith('.gif') || url.endsWith('.jpeg') || url.endsWith('.JPG')){
                             $('#data').html('<img src=' + url + ' />')
                         }
                         else if(url.endsWith('.mp4') || url.endsWith('.webm')){
