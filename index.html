@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Dogs to brighten your day! - Neelansh Mathur</title>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-3">Random Dog Images and Videos!</h1>
+            <p class="lead">Happy puppers to brighten your day! <br> Neelansh Mathur</p>
+            <button class="btn btn-primary">Refresh Pupper</button>
+            
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="display-4">Data:</h2>
+        <div class="data" id="data"></div>
+    </div>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                $.get('https://random.dog/woof.json', function(data, status){
+                    url = data['url']
+                    if(url.endsWith('.jpg') || url.endsWith('.png') || url.endsWith('.gif')){
+                        $('#data').html('<img src=' + url + ' />')
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+</html>
