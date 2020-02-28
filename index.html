@@ -27,7 +27,7 @@
                 $.ajax({
                     url: 'https://random.dog/woof.json',
                     success: function(result){
-                        url = result['url']
+                        url = result['url'].toLowerCase()
                         if(url.endsWith('.jpg') || url.endsWith('.png') || url.endsWith('.gif') || url.endsWith('.jpeg')){
                             $('#data').html('<img src=' + url + ' />')
                         }
