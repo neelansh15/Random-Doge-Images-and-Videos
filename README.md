@@ -1,4 +1,5 @@
-# Random-Doge-Images-and-Videos
+# Random Doge Images and Videos
+#### Happy puppers to brighten your day!
 A Website that loads a random Image or Video of Dogs from the RandomDogAPI!
 It uses jQuery with AJAX to asynchronously load images or videos.
 
